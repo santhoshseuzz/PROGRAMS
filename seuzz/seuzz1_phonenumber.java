@@ -6,7 +6,7 @@ public class seuzz1_phonenumber {
     {
         Scanner se = new Scanner(System.in);
         System.out.println("enter your mobile number");
-        int a = se.nextInt();
+        long a = se.nextInt();
         System.out.println("your phone nymber is "+ a);
 
 
