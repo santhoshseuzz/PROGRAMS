@@ -1,15 +1,27 @@
 package selfevaluation;
-
-import javax.sound.midi.SysexMessage;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
     public static void main(String[] args) {
-        GameMethods obj = new GameMethods();
-        obj.output();
+        Gmethods obj = new Gmethods();
+        //GameMethods obj = new GameMethods();
+        while(true){
+            Scanner get = new Scanner(System.in);
+            int n = get.nextInt();
+            switch (n) {
+                case 1:
+                    obj.output();
+                    break;
+                case 0:
+                    System.exit(0);
+                    break;
+            }
+            }
+
+        }
+
     }
-}
 class GameMethods{
     int min = 0;
     int max = 9;
@@ -61,10 +73,10 @@ class GameMethods{
                         temp = operand4;
                         break;
                 }
-             char a=charReturn();
-             System.out.println("printing character"+a);
+             char opchar=charReturn();
+             System.out.println("printing character"+opchar);
 
-                    switch (a) {
+             switch (opchar) {
 
                         case '+':
                             sum = sum +temp;
@@ -98,11 +110,13 @@ class GameMethods{
         System.out.println(operand4);
         int answer= 0;
         for(int i=1;i<4;i++) {
-            System.out.println("Choose your operand.....");
+
             if(i==1) {
+                System.out.println("Choose your operand.....");
                 int input1 = get.nextInt();
                 answer = input1;
             }
+            System.out.println("Choose your opernad....");
             int input2 = get.nextInt();
             System.out.println("Choose your operator......");
             char inputoperator = get.next().charAt(0);
